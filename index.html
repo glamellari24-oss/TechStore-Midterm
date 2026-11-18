@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore | Midterm Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="products.js" defer></script>
+  <script src="search.js" defer></script>
+  <script src="cart.js" defer></script>
+</head>
+<body>
+  <!-- Glejdis Lamellari: HTML structure, navigation, content and search field -->
+  <header class="header"><a class="logo" href="#home">tech<span>store.</span></a><nav aria-label="Main navigation"><a href="#products">Products</a><a href="#about">Our project</a><a href="#cart">Cart <span id="cart-count">0</span></a></nav></header>
+  <main>
+    <section id="home" class="hero">
+      <div><p class="eyebrow">THE EVERYDAY TECH COLLECTION</p><h1>Small upgrades.<br><span>Big possibilities.</span></h1><p class="intro">Find the tools for your next idea. Explore our selection of laptops, audio and everyday accessories.</p><a class="button" href="#products">Explore products ↗</a><p class="prototype">Midterm prototype · HTML / CSS / JavaScript</p></div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit"></div><div class="laptop"><div class="screen"><span>CREATE.<br>CONNECT.<br>EXPLORE.</span></div><div class="base"></div></div><span class="art-label">YOUR NEXT IDEA STARTS HERE</span></div>
+    </section>
+    <section id="products" class="section">
+      <div class="section-heading"><div><p class="eyebrow">CURATED ESSENTIALS</p><h2>Discover your next upgrade</h2></div><span id="result-count" aria-live="polite"></span></div>
+      <div class="filters"><label>Search products<input id="search" type="search" placeholder="Try laptop or headphones…"></label><label>Category<select id="category"><option value="All">All categories</option><option>Laptops</option><option>Audio</option><option>Accessories</option></select></label><label>Sort by<select id="sort"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label></div>
+      <div id="product-grid" class="product-grid"></div><noscript>Please enable JavaScript to view products and use the cart.</noscript>
+    </section>
+    <!-- Cart interface: HTML structure connected to cart.js -->
+    <section id="cart" class="section cart-section"><div><p class="eyebrow">YOUR SELECTION</p><h2>Shopping cart</h2><p>Review your items before your next upgrade.</p><p class="note">Demo only. Payments and real orders are planned for the final project.</p></div><div class="cart-box"><div id="cart-items" aria-live="polite"></div><div class="total"><span>Total</span><strong id="cart-total">€0.00</strong></div><button id="clear-cart" class="secondary" type="button">Clear cart</button></div></section>
+    <section id="about" class="section about"><p class="eyebrow">BUILT TOGETHER</p><h2>Four people. One project.</h2><p>TechStore is our Web Development and Programming midterm prototype. This version demonstrates a responsive interface, product filtering and a working browser-based cart.</p><div class="team"><article><span>01 / HTML &amp; SEARCH</span><h3>Glejdis Lamellari</h3><p>HTML structure, navigation, team information and live product search.</p></article><article><span>02 / DESIGN</span><h3>Elsid Latifi</h3><p>CSS styling and responsive layout.</p></article><article><span>03 / PRODUCTS</span><h3>Daniel Cullhaj</h3><p>Product data, product cards, categories and price sorting.</p></article><article><span>04 / CART</span><h3>Enkel Cani</h3><p>Cart actions, quantities, totals and local storage.</p></article></div><div class="roadmap"><strong>Next for the final project</strong><p>Product detail pages · User accounts · Backend database · Checkout workflow</p></div></section>
+  </main>
+  <footer><a class="logo" href="#home">tech<span>store.</span></a><p>Web Development and Programming · Midterm prototype</p></footer>
+  <div id="status" class="toast" role="status"></div>
+</body>
+</html>
